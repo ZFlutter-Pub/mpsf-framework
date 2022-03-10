@@ -22,6 +22,10 @@ dependencies:
   # 状态管理
   # https://pub.flutter-io.cn/packages/provider#-example-tab-
   provider: ^6.0.2
+  # 图标
+  # https://github.com/fluttercommunity/font_awesome_flutter
+  # https://fontawesome.com/icons/arrow-left?s=thin
+  font_awesome_flutter: ^9.2.0
 
 dev_dependencies:
   flutter_test:

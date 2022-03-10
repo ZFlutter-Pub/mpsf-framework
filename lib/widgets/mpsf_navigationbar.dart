@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mpsf_framework/mpsf_framework.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // 自定义导航条
 class MpsfNavigationBar extends StatefulWidget {
@@ -84,9 +85,9 @@ class _MpsfNavigationBarState extends State<MpsfNavigationBar> {
               IconButton(
                 onPressed: clickBackWidget,
                 padding: const EdgeInsets.all(12.0),
-                icon: const MpsfAssetImage(
-                  "images/navigationBar/ic_back_black",
-                  height: 18,
+                icon: const FaIcon(
+                  FontAwesomeIcons.arrowLeft,
+                  size: 18,
                 ),
               )
             ],

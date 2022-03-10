@@ -5,41 +5,47 @@ import '../utils/mpsf_image_utils.dart';
 
 /// 图片加载（支持本地与网络图片）
 class MpsfNetworkImage extends StatelessWidget {
-  const MpsfNetworkImage(this.imageUrl,
-      {Key? key,
-      this.width,
-      this.height,
-      this.fit = BoxFit.cover,
-      this.color,
-      this.holderImg = "images/placeholder"})
-      : super(key: key);
+  const MpsfNetworkImage(
+    this.image, {
+    Key? key,
+    this.width,
+    this.height,
+    this.fit = BoxFit.cover,
+    this.color,
+    this.placeholder,
+    this.errorWidget,
+  }) : super(key: key);
 
-  final String? imageUrl;
+  final String? image;
   final double? width;
   final double? height;
   final BoxFit? fit;
   final Color? color;
-  final String holderImg;
+  final Widget? placeholder;
+  final Widget? errorWidget;
 
   @override
   Widget build(BuildContext context) {
-    Widget placeHolder = MpsfAssetImage(holderImg,
-        height: height, width: width, fit: fit, format: "png");
-    if (!TextUtil.isEmpty(imageUrl) && imageUrl!.startsWith("http")) {
-      return CachedNetworkImage(
-          imageUrl: imageUrl!,
-          placeholder: (context, url) {
-            return placeHolder;
-          },
-          errorWidget: (context, url, error) {
-            return placeHolder;
-          },
-          width: width,
-          height: height,
-          fit: fit,
-          color: color);
+    if (!TextUtil.isEmpty(image)) {
+      if (image!.startsWith("http")) {
+        return CachedNetworkImage(
+            imageUrl: image!,
+            placeholder: (context, url) {
+              return placeholder ?? Container(color: Colors.grey);
+            },
+            errorWidget: (context, url, error) {
+              return errorWidget ?? Container(color: Colors.grey);
+            },
+            width: width,
+            height: height,
+            fit: fit,
+            color: color);
+      } else {
+        return MpsfAssetImage(image!,
+            height: height, width: width, fit: fit, format: "png");
+      }
     } else {
-      return placeHolder;
+      return Container();
     }
   }
 }
@@ -47,7 +53,7 @@ class MpsfNetworkImage extends StatelessWidget {
 /// 加载本地资源图片
 class MpsfAssetImage extends StatelessWidget {
   const MpsfAssetImage(
-    this.name, {
+    this.image, {
     Key? key,
     this.width,
     this.height,
@@ -57,7 +63,7 @@ class MpsfAssetImage extends StatelessWidget {
     this.color,
   }) : super(key: key);
 
-  final String name;
+  final String image;
   final String format;
   final double? width;
   final double? height;
@@ -68,7 +74,7 @@ class MpsfAssetImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      MpsfImageUtils.getImgPath(name, format: format),
+      MpsfImageUtils.getImgPath(image, format: format),
       height: height,
       width: width,
       scale: scale,
