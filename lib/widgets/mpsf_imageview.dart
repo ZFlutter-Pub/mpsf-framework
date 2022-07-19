@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flustars/flustars.dart';
+import 'package:flustars_flutter3/flustars_flutter3.dart';
 import 'package:flutter/material.dart';
 import '../utils/mpsf_image_utils.dart';
 

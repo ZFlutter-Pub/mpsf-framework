@@ -1,6 +1,6 @@
 library mpsf_framework;
 
-export 'package:flustars/flustars.dart';
+export 'package:flustars_flutter3/flustars_flutter3.dart';
 export 'package:cached_network_image/cached_network_image.dart';
 export 'package:logger/logger.dart';
 export 'package:package_info_plus/package_info_plus.dart';

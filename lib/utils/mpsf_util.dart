@@ -1,4 +1,4 @@
-import 'package:flustars/flustars.dart';
+import 'package:flustars_flutter3/flustars_flutter3.dart';
 
 ///字符串
 String mpsfStr(String? data, {String placehold = ""}) {
