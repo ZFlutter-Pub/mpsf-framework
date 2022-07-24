@@ -26,10 +26,12 @@ class _ProviderWidgetState<T extends ChangeNotifier>
     extends State<ProviderWidget<T>> {
   @override
   void initState() {
-    if (widget.onReady != null) {
-      widget.onReady!(widget.model);
-    }
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      if (widget.onReady != null) {
+        widget.onReady!(widget.model);
+      }
+    });
   }
 
   @override
