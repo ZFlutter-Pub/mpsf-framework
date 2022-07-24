@@ -23,6 +23,7 @@ export 'package:mpsf_framework/widgets/mpsf_navigationbar.dart';
 export 'package:mpsf_framework/widgets/mpsf_price.dart';
 export 'package:mpsf_framework/widgets/mpsf_reddot_text.dart';
 export 'package:mpsf_framework/widgets/mpsf_countdown.dart';
+export 'package:mpsf_framework/widgets/mpsf_default_scaffold.dart';
 
 //cell-template
 export 'package:mpsf_framework/cell-template/mpsf_common_cell.dart';
