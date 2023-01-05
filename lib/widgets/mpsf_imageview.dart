@@ -31,10 +31,10 @@ class MpsfNetworkImage extends StatelessWidget {
         return CachedNetworkImage(
             imageUrl: image!,
             placeholder: (context, url) {
-              return placeholder ?? Container(color: Colors.grey);
+              return placeholder ?? Container(color: Colors.black12);
             },
             errorWidget: (context, url, error) {
-              return errorWidget ?? Container(color: Colors.grey);
+              return errorWidget ?? Container(color: Colors.black12);
             },
             width: width,
             height: height,
