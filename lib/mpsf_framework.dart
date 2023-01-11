@@ -13,6 +13,7 @@ export 'package:mpsf_framework/utils/mpsf_package_info.dart';
 export 'package:mpsf_framework/utils/mpsf_calculator.dart';
 export 'package:mpsf_framework/utils/mpsf_util.dart';
 export 'package:mpsf_framework/utils/mpsf_text_util.dart';
+export 'package:mpsf_framework/utils/mpsf_screen_util.dart';
 export 'package:mpsf_framework/utils/mpsf_input_formatters.dart';
 export 'package:mpsf_framework/utils/mpsf_reg_exp.dart';
 
