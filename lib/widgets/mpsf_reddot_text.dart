@@ -1,5 +1,5 @@
-import 'package:flustars_flutter3/flustars_flutter3.dart';
 import 'package:flutter/material.dart';
+import '../utils/mpsf_text_util.dart';
 import '../utils/mpsf_util.dart';
 
 class MpsfRedDotText extends StatelessWidget {
@@ -27,7 +27,7 @@ class MpsfRedDotText extends StatelessWidget {
   List<Widget> _buildWidgets() {
     List<Widget> children = <Widget>[];
 
-    if (!TextUtil.isEmpty(data)) {
+    if (!MpsfTextUtil.isEmpty(data)) {
       TextStyle textStyle = TextStyle(fontSize: fontSize, color: color);
       children.add(
         Text(mpsfStr(data), style: textStyle),

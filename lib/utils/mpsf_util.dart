@@ -1,8 +1,8 @@
-import 'package:flustars_flutter3/flustars_flutter3.dart';
+import 'mpsf_text_util.dart';
 
 ///字符串
 String mpsfStr(String? data, {String placehold = ""}) {
-  if (TextUtil.isEmpty(data)) {
+  if (MpsfTextUtil.isEmpty(data)) {
     return placehold;
   }
   return data!;

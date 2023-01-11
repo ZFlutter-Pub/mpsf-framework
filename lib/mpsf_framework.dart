@@ -1,6 +1,5 @@
 library mpsf_framework;
 
-export 'package:flustars_flutter3/flustars_flutter3.dart';
 export 'package:cached_network_image/cached_network_image.dart';
 export 'package:logger/logger.dart';
 export 'package:package_info_plus/package_info_plus.dart';
@@ -13,6 +12,7 @@ export 'package:mpsf_framework/utils/mpsf_log_utils.dart';
 export 'package:mpsf_framework/utils/mpsf_package_info.dart';
 export 'package:mpsf_framework/utils/mpsf_calculator.dart';
 export 'package:mpsf_framework/utils/mpsf_util.dart';
+export 'package:mpsf_framework/utils/mpsf_text_util.dart';
 export 'package:mpsf_framework/utils/mpsf_input_formatters.dart';
 export 'package:mpsf_framework/utils/mpsf_reg_exp.dart';
 

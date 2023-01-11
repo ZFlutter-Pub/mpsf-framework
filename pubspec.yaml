@@ -11,21 +11,28 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Flutter 常用工具类库 https://github.com/mdddj/flustars
-  flustars_flutter3: ^3.0.0
-  # 图片加载 https://github.com/Baseflow/flutter_cached_network_image
-  cached_network_image: ^3.2.3
-  # 日志打印
-  logger: ^1.1.0
-  # 包信息获取
-  package_info_plus: ^3.0.2
-  # 状态管理
-  # https://pub.flutter-io.cn/packages/provider#-example-tab-
-  provider: ^6.0.5
   # 图标
+  # 平台: Android iOS Linux macOS web Windows
   # https://github.com/fluttercommunity/font_awesome_flutter
   # https://fontawesome.com/icons/arrow-left?s=thin
   font_awesome_flutter: ^10.3.0
+
+  # 日志打印
+  # 平台: Android iOS Linux macOS web Windows
+  logger: ^1.1.0
+
+  # 包信息获取
+  # 平台: Android iOS Linux macOS web Windows
+  package_info_plus: ^3.0.2
+
+  # 状态管理
+  # 平台: Android iOS Linux macOS web Windows
+  # https://pub.flutter-io.cn/packages/provider#-example-tab-
+  provider: ^6.0.5
+
+  # 图片加载 https://github.com/Baseflow/flutter_cached_network_image
+  # 平台: 🔥Android iOS macOS
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   flutter_test:

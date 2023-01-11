@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flustars_flutter3/flustars_flutter3.dart';
 import 'package:flutter/material.dart';
 import '../utils/mpsf_image_utils.dart';
+import '../utils/mpsf_text_util.dart';
 
 /// 图片加载（支持本地与网络图片）
 class MpsfNetworkImage extends StatelessWidget {
@@ -26,7 +26,7 @@ class MpsfNetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!TextUtil.isEmpty(image)) {
+    if (!MpsfTextUtil.isEmpty(image)) {
       if (image!.startsWith("http")) {
         return CachedNetworkImage(
             imageUrl: image!,
